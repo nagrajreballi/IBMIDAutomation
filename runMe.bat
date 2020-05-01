@@ -1,0 +1,1 @@
+java -cp bin;libs/* org.testng.TestNG ./xmlFiles/run.xml

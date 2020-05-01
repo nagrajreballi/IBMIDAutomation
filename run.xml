@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="StandardSuites" parallel="none" preserve-order="true">
+	<listeners>
+	    <listener class-name="com.ibm.reusable.utils.MyTestListner"/>
+	</listeners>
+	<suite-files>
+		<suite-file path="registrationModule.xml"></suite-file>
+		<suite-file path="passwordResetModule.xml"></suite-file>
+		<!--  -->
+	</suite-files>
+</suite>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RegistrationSuite" parallel="none" preserve-order="true">
+	
+	<parameter name="browser" value="FF"/>
+	
+ 	
+ 	<listeners>
+    	<listener class-name="com.ibm.reusable.utils.MyTestListner"/>
+	</listeners>
+	
+	
+	<groups>
+  		<!-- FieldValidation, Regression, Sanity,Smoke -->
+		<run>
+			<include name="Sanity"></include>
+			<exclude name="ComplexScenario"></exclude>
+		</run>
+	</groups>
+	
+	
+	<test name="RegistrationModuleTest">
+    	<classes>
+    		<class name="com.ibm.standard.registrationModule.TC01_Register_User"/>  
+  		    <class name="com.ibm.standard.registrationModule.TC02_EmailFieldValidation"/> 
+  			<class name="com.ibm.standard.registrationModule.TC03_FirstNameFieldValidation"/> 
+  			<class name="com.ibm.standard.registrationModule.TC04_LastNameFieldValidation"/> 
+  			<class name="com.ibm.standard.registrationModule.TC06_PhoneNumberFieldValidation"/> 
+  			<class name="com.ibm.standard.registrationModule.TC07_PasswordFieldValidation"/>
+  			<class name="com.ibm.standard.registrationModule.TC08_ResendEmailBtnValidation"/> 
+  			<class name="com.ibm.standard.registrationModule.TC09_CheckCodeExpiry"/> 
+  			<class name="com.ibm.standard.registrationModule.TC10_UnderConfirmCode_ResendCodeChk"/> 
+  			<class name="com.ibm.standard.registrationModule.TC11_CheckSignInLinkFromRegistrationPage"/> 
+  			<class name="com.ibm.standard.registrationModule.TC12_CompanyFieldValidation"/> 
+  			<class name="com.ibm.standard.registrationModule.TC13_RegisterUserWithInvalidData"/> 
+  			<class name="com.ibm.standard.registrationModule.TC14_ExistingUser_trialProvision"/> 
+  			<class name="com.ibm.standard.registrationModule.TC15_NoticesAndChoice"/> 
+  			<class name="com.ibm.standard.registrationModule.TC17_CheckAllLinks"/> 
+  			<class name="com.ibm.standard.registrationModule.TC19_MastHeadSession_ProductionRunOnly"/>  
+   			<class name="com.ibm.standard.registrationModule.TC21_Register_User_From_Short_Form"/>   
+		</classes>
+	</test>
+	
+	
+   <!-- StandardRegistrationTest -->
+</suite> <!-- StandardRegistrationSuite -->
